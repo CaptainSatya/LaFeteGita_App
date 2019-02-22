@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/online_event_list_tv_id"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Online Events!"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/CL_online1_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/CL_online1_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/online_event_list_tv_id">
+
+            <android.support.v7.widget.CardView
+                style="@style/CardView.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                tools:ignore="ContentDescription">
+
+                <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/media_image"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/invite3"
+                            app:layout_constraintBottom_toTopOf="@+id/primary_text"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread" />
+
+                        <TextView
+                            android:id="@+id/primary_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Creative Invite"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/sub_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/media_image" />
+
+                        <TextView
+                            android:id="@+id/sub_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="21st Feb'19"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
+                            app:layout_constraintTop_toBottomOf="@+id/primary_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/action_button_1" />
+
+                        <Button
+                            android:id="@+id/action_button_1"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:minWidth="0dp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="@string/register"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/supporting_text_home_page_tv_id"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sub_text" />
+
+                        <com.like.LikeButton
+                            android:id="@+id/favorite_button"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="#00FFFFFF"
+                            android:padding="0dp"
+                            app:icon_size="25dp"
+                            app:icon_type="heart"
+                            app:layout_constraintBottom_toBottomOf="@+id/action_button_1"
+                            app:layout_constraintStart_toEndOf="@+id/action_button_1"
+                            app:layout_constraintTop_toTopOf="@+id/action_button_1"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/share_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="152dp"
+                            android:background="#00FFFFFF"
+                            android:padding="12dp"
+                            app:layout_constraintBottom_toBottomOf="@id/favorite_button"
+                            app:layout_constraintEnd_toEndOf="@id/expand_button"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/favorite_button"
+                            app:layout_constraintTop_toTopOf="@+id/favorite_button"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:srcCompat="@drawable/ic_share_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/expand_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="#00FFFFFF"
+                            android:padding="6dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/action_button_1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/ic_expand_more_black_36dp" />
+
+                        <TextView
+                            android:id="@+id/supporting_text_online_tv_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:lineSpacingExtra="8dp"
+                            android:text="@string/expanded_supporting"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/action_button_1" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/CL_2_online_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/CL_online1_id">
+
+            <android.support.v7.widget.CardView
+                style="@style/CardView.Light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                tools:ignore="ContentDescription">
+
+                <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/essay_iv_id"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/essay2"
+                            app:layout_constraintBottom_toTopOf="@+id/essay_tv_id"
+                            app:layout_constraintDimensionRatio="H,16:9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/essay_tv_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="Think Piece-Online essay"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/essay_date_tv_id"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/essay_iv_id" />
+
+                        <TextView
+                            android:id="@+id/essay_date_tv_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:text="22nd Feb'19"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/essay_register_btn_id"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/essay_tv_id" />
+
+                        <Button
+                            android:id="@+id/essay_register_btn_id"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:minWidth="0dp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="@string/register"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/supporting_text_home_page_tv_id"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/essay_date_tv_id" />
+
+                        <com.like.LikeButton
+                            android:id="@+id/essay_favorite_btn_id"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="#00FFFFFF"
+                            android:padding="0dp"
+                            app:icon_size="25dp"
+                            app:icon_type="heart"
+                            app:layout_constraintStart_toEndOf="@+id/essay_register_btn_id"
+                            app:layout_constraintTop_toTopOf="@+id/essay_register_btn_id"
+                            app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/essay_share_btn_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="152dp"
+                            android:background="#00FFFFFF"
+                            android:padding="12dp"
+                            app:layout_constraintBottom_toBottomOf="@id/essay_favorite_btn_id"
+                            app:layout_constraintEnd_toEndOf="@id/essay_expand_ibtn_id"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/essay_favorite_btn_id"
+                            app:layout_constraintTop_toTopOf="@+id/essay_favorite_btn_id"
+                            app:srcCompat="@drawable/ic_share_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/essay_expand_ibtn_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:background="#00FFFFFF"
+                            android:padding="6dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/essay_register_btn_id"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/ic_expand_more_black_36dp" />
+
+                        <TextView
+                            android:id="@+id/essay_supporting_text_tv_id"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:lineSpacingExtra="8dp"
+                            android:text="@string/essay_expand"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/essay_register_btn_id" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+

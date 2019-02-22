@@ -1,0 +1,19 @@
+<resources>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_name">La Fête Gita</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="Awesome_heading">Be Awesome! This Feb join the biggest happening in town</string>
+    <string name="LaFeteGita_description"><![CDATA[In order to celebrate the real glories of India, a Mega Youth Cultural Fest ‘La fête Gita’ is organized from 22nd-24th February 2019, in ISKCON Bangalore. Anyone aged between 18 & 30 from all corporate and educational institutions are invited to participate and cherish this grand event..]]></string>
+    <string name="hare_krisnha">Hare Krishna Hare Krishna,Krishna Krishna Hare Hare!</string>
+    <string name="register">Register</string>
+    <string name="expanded_supporting">Do you have many friends to invite. Promoting La Fete Gita is the best opportunity. Join us! and let your friends appriciate your first video invite</string>
+    <string name="essay_expand">Do you have many friends to invite. Promoting La Fete Gita is the best opportunity. Join us! and let your friends appriciate your first video invite</string>
+
+</resources>
