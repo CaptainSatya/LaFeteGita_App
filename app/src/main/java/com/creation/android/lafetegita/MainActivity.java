@@ -30,6 +30,7 @@ public class MainActivity extends BaseActivity {
     ImageButton play_btn;
     private YouTubePlayerSupportFragment youTubePlayerFragment;
     Button know_more_btn;
+    Button explore_btn;
 
     //private TextView mTextMessage;
     //Button btn;
@@ -98,6 +99,15 @@ public class MainActivity extends BaseActivity {
 
         know_more_btn = findViewById(R.id.know_btn_id);
         know_more_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AboutUS.class);
+                startActivity(intent);
+            }
+        });
+
+        explore_btn = findViewById(R.id.explore_events_btn_id);
+        explore_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, EventCategories.class);

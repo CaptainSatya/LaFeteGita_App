@@ -24,7 +24,13 @@
         <activity
             android:name=".EventCategories"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OnlineEvents"></activity>
+        <activity android:name=".OnlineEvents" />
+        <activity android:name=".Hackathon" />
+        <activity android:name=".Prizes"></activity>
+
+        <activity
+            android:name=".AboutUS"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 public class EventCategories extends BaseActivity {
 
     CardView online_event_card;
+    CardView hackathon_card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,15 @@ public class EventCategories extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventCategories.this, OnlineEvents.class);
+                startActivity(intent);
+            }
+        });
+
+        hackathon_card = findViewById(R.id.hackathon_card_id);
+        hackathon_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventCategories.this, Hackathon.class);
                 startActivity(intent);
             }
         });

@@ -15,10 +15,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="@dimen/activity_vertical_margin"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background" />
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_margin="22dp" />
 
     <TextView
         android:layout_width="match_parent"

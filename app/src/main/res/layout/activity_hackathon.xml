@@ -19,8 +19,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="About Us!"
-            android:textAlignment="center"
+            android:text="Online Events!"
             android:textSize="30sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/CL_online1_id"
@@ -61,12 +60,8 @@
                             android:id="@+id/media_image"
                             android:layout_width="336dp"
                             android:layout_height="189dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/lafetegita"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/invite3" />
 
                         <TextView
                             android:id="@+id/primary_text"
@@ -75,7 +70,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="What is La Fête Gita?"
+                            android:text="Mobi UI/UX App Dev"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
                             app:layout_constraintBottom_toTopOf="@+id/sub_text"
@@ -92,15 +87,76 @@
                             android:text="24th Feb'19"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
-                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/primary_text"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/primary_text" />
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/explore_events_btn_id" />
+
+                        <Button
+                            android:id="@+id/explore_events_btn_id"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:minWidth="0dp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="Details"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/supporting_text_home_page_tv_id"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/sub_text" />
+
+                        <com.like.LikeButton
+                            android:id="@+id/favorite_button"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="#00FFFFFF"
+                            android:padding="0dp"
+                            app:icon_size="25dp"
+                            app:icon_type="heart"
+                            app:layout_constraintBottom_toBottomOf="@+id/explore_events_btn_id"
+                            app:layout_constraintStart_toEndOf="@+id/explore_events_btn_id"
+                            app:layout_constraintTop_toTopOf="@+id/explore_events_btn_id"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/share_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="152dp"
+                            android:background="#00FFFFFF"
+                            android:padding="12dp"
+                            app:layout_constraintBottom_toBottomOf="@id/favorite_button"
+                            app:layout_constraintEnd_toEndOf="@id/expand_button"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/favorite_button"
+                            app:layout_constraintTop_toTopOf="@+id/favorite_button"
+                            app:layout_constraintVertical_bias="1.0"
+                            app:srcCompat="@drawable/ic_share_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/expand_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="#00FFFFFF"
+                            android:padding="6dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/explore_events_btn_id"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/ic_expand_more_black_36dp" />
 
                         <TextView
                             android:id="@+id/supporting_text_online_tv_id"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
                             android:lineSpacingExtra="8dp"
@@ -110,21 +166,8 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/textView8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginBottom="8dp"
-                            android:text="La Fête Gita is a festival celebrating the rich cultural heritage and wisdom of Vedic texts. India has been the world’s capital for cultural and traditional ethos for several centuries. Its diverse heritage stands as a tall edifice of its rich and glorious history, gleaming a sense of pride in every Indian’s heart.    This event celebrating India, provides an open platform for the holistic expression of talent besides bringing together youngsters of corporate and educational institutions to celebrate creativity, innovation and sportsmanship and thus embrace real happiness and peace."
-                            android:textAlignment="center"
-                            android:textStyle="italic"
-                            app:layout_constraintBottom_toTopOf="@+id/supporting_text_online_tv_id"
-                            app:layout_constraintEnd_toEndOf="@+id/sub_text"
-                            app:layout_constraintStart_toStartOf="@+id/sub_text"
-                            app:layout_constraintTop_toBottomOf="@+id/sub_text" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/explore_events_btn_id" />
 
                     </android.support.constraint.ConstraintLayout>
                 </android.support.constraint.ConstraintLayout>
@@ -171,8 +214,8 @@
                             android:id="@+id/essay_iv_id"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/inspiration"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/essay2"
                             app:layout_constraintBottom_toTopOf="@+id/essay_tv_id"
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -188,11 +231,9 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="Srila Prabhupada "
-                            android:textAlignment="center"
+                            android:text="3D Game Dev"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
-                            android:textStyle="bold|italic"
                             app:layout_constraintBottom_toTopOf="@+id/essay_date_tv_id"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -204,19 +245,76 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="(Founder-Acharya International Society of Krishna Conciousness)  "
-                            android:textAlignment="center"
+                            android:text="23rd Feb'19"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/essay_register_btn_id"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/essay_tv_id" />
+
+                        <Button
+                            android:id="@+id/essay_register_btn_id"
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:minWidth="0dp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:text="@string/details_of_event"
+                            android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
+                            app:layout_constraintBottom_toTopOf="@+id/supporting_text_home_page_tv_id"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/essay_date_tv_id" />
+
+                        <com.like.LikeButton
+                            android:id="@+id/essay_favorite_btn_id"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="#00FFFFFF"
+                            android:padding="0dp"
+                            app:icon_size="25dp"
+                            app:icon_type="heart"
+                            app:layout_constraintStart_toEndOf="@+id/essay_register_btn_id"
+                            app:layout_constraintTop_toTopOf="@+id/essay_register_btn_id"
+                            app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/essay_share_btn_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="152dp"
+                            android:background="#00FFFFFF"
+                            android:padding="12dp"
+                            app:layout_constraintBottom_toBottomOf="@id/essay_favorite_btn_id"
+                            app:layout_constraintEnd_toEndOf="@id/essay_expand_ibtn_id"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/essay_favorite_btn_id"
+                            app:layout_constraintTop_toTopOf="@+id/essay_favorite_btn_id"
+                            app:srcCompat="@drawable/ic_share_black_24dp" />
+
+                        <ImageButton
+                            android:id="@+id/_3d_expand_ibtn_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:background="#00FFFFFF"
+                            android:padding="6dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/essay_register_btn_id"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/ic_expand_more_black_36dp" />
 
                         <TextView
                             android:id="@+id/_3d_supporting_text_tv_id"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="8dp"
                             android:lineSpacingExtra="8dp"
@@ -226,20 +324,8 @@
                             android:visibility="gone"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <TextView
-                            android:id="@+id/srila_quote_tv_id"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:text="We are therefore trying to give human society the opportunity for a life of happiness, good health, peace of mind and all good qualities through God consciousness."
-                            android:textAlignment="center"
-                            android:textStyle="italic"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="@+id/essay_date_tv_id"
-                            app:layout_constraintStart_toStartOf="@+id/essay_date_tv_id"
-                            app:layout_constraintTop_toBottomOf="@+id/essay_date_tv_id" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/essay_register_btn_id" />
 
                     </android.support.constraint.ConstraintLayout>
                 </android.support.constraint.ConstraintLayout>

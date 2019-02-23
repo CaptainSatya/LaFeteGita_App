@@ -5,7 +5,6 @@ package com.creation.android.lafetegita;
  */
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,10 +13,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.Spinner;
-
-import com.creation.android.lafetegita.MainActivity;
-import com.creation.android.lafetegita.R;
 
 
 public class BaseActivity extends AppCompatActivity {
@@ -45,17 +40,29 @@ public class BaseActivity extends AppCompatActivity {
                 // Handle navigation view item clicks here.
                 int id = item.getItemId();
 
-                if (id == R.id.nav_camera) {
+                if (id == R.id.nav_home_id) {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
                     // Handle the camera action
-                } else if (id == R.id.nav_gallery) {
+                } else if (id == R.id.nav_about_us_id) {
+                    Intent intent = new Intent(getApplicationContext(), AboutUS.class);
+                    startActivity(intent);
 
-                } else if (id == R.id.nav_slideshow) {
+                } else if (id == R.id.nav_events_id) {
+                    Intent intent = new Intent(getApplicationContext(), EventCategories.class);
+                    startActivity(intent);
 
-                } else if (id == R.id.nav_manage) {
+                } else if (id == R.id.nav_mega_reg_id) {
+                    /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
+                    startActivity(intent);*/
 
                 } else if (id == R.id.nav_share) {
+                    /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
+                    startActivity(intent);*/
 
                 } else if (id == R.id.nav_send) {
+                    /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
+                    startActivity(intent);*/
 
                 }
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

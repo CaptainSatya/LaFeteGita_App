@@ -5,21 +5,25 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_home_id"
+            android:icon="@drawable/home_outline"
+            android:title="Home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_about_us_id"
+            android:icon="@drawable/about_outline"
+            android:title="About Us" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_events_id"
+            android:icon="@drawable/icon_add_event"
+            android:title="Events" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_mega_reg_id"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Mega Registration" />
+        <item
+            android:id="@+id/prizes"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Prizes" />
     </group>
 
     <item android:title="Communicate">
