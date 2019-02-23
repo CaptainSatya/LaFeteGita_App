@@ -1,6 +1,7 @@
 package com.creation.android.lafetegita;
 
 import android.content.Intent;
+import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,12 @@ public class DetailsUI_Hack extends BaseActivity {
         navigationView.getMenu().getItem(1).setChecked(true);
 
         reg_btn = findViewById(R.id.reg_btn_id);
+        reg_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DetailsUI_Hack.this, GLoginActivity.class));
+            }
+        });
 
 
     }
