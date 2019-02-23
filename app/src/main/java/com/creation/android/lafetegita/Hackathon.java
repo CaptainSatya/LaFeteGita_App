@@ -1,5 +1,6 @@
 package com.creation.android.lafetegita;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ public class Hackathon extends BaseActivity {
     TextView ui_supporting_text_tv;
     ImageButton _3d_expand_ibtn;
     TextView _3d_supporting_text_tv;
+
+    Button details_ui_hack_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,14 @@ public class Hackathon extends BaseActivity {
                     //ui_expandButton.setVisibility(View.GONE);
 
                 }
+            }
+        });
+        details_ui_hack_btn = findViewById(R.id.detail_ui_hack_id);
+        details_ui_hack_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Hackathon.this, DetailsUI_Hack.class);
+                startActivity(intent);
             }
         });
 

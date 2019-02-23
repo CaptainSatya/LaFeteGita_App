@@ -2,18 +2,12 @@ package com.creation.android.lafetegita;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatButton;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -106,7 +100,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        explore_btn = findViewById(R.id.explore_events_btn_id);
+        explore_btn = findViewById(R.id.detail_ui_hack_id);
         explore_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

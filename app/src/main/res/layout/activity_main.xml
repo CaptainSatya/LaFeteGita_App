@@ -225,7 +225,7 @@
                         android:layout_marginTop="12dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/youth_festival"
-                        app:layout_constraintBottom_toTopOf="@id/explore_events_btn_id"
+                        app:layout_constraintBottom_toTopOf="@id/detail_ui_hack_id"
                         app:layout_constraintDimensionRatio="H,16:9"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
@@ -233,7 +233,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/avatar_image" />
 
                     <Button
-                        android:id="@+id/explore_events_btn_id"
+                        android:id="@+id/detail_ui_hack_id"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -259,7 +259,7 @@
                         android:text="Share"
                         android:textColor="#DE000000"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/explore_events_btn_id"
+                        app:layout_constraintStart_toEndOf="@+id/detail_ui_hack_id"
                         app:layout_constraintTop_toBottomOf="@+id/media_image"
                         app:layout_constraintVertical_bias="0.0" />
 
@@ -293,7 +293,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/explore_events_btn_id" />
+                        app:layout_constraintTop_toBottomOf="@+id/detail_ui_hack_id" />
                     <!-- To expand you set visibility to "visible". To collapse you set visibility to "gone" -->
                 </android.support.constraint.ConstraintLayout>
 

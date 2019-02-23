@@ -90,15 +90,15 @@
                             app:layout_constraintTop_toBottomOf="@+id/primary_text"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintBottom_toTopOf="@+id/explore_events_btn_id" />
+                            app:layout_constraintBottom_toTopOf="@+id/detail_ui_hack_id" />
 
                         <Button
-                            android:id="@+id/explore_events_btn_id"
+                            android:id="@+id/detail_ui_hack_id"
                             style="@style/Widget.AppCompat.Button.Borderless"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="11dp"
                             android:minWidth="0dp"
                             android:paddingStart="8dp"
                             android:paddingEnd="8dp"
@@ -118,9 +118,9 @@
                             android:padding="0dp"
                             app:icon_size="25dp"
                             app:icon_type="heart"
-                            app:layout_constraintBottom_toBottomOf="@+id/explore_events_btn_id"
-                            app:layout_constraintStart_toEndOf="@+id/explore_events_btn_id"
-                            app:layout_constraintTop_toTopOf="@+id/explore_events_btn_id"
+                            app:layout_constraintBottom_toBottomOf="@+id/detail_ui_hack_id"
+                            app:layout_constraintStart_toEndOf="@+id/detail_ui_hack_id"
+                            app:layout_constraintTop_toTopOf="@+id/detail_ui_hack_id"
                             app:layout_constraintVertical_bias="0.0"
                             app:srcCompat="@drawable/ic_favorite_black_24dp" />
 
@@ -147,7 +147,7 @@
                             android:layout_marginEnd="8dp"
                             android:background="#00FFFFFF"
                             android:padding="6dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/explore_events_btn_id"
+                            app:layout_constraintBottom_toBottomOf="@+id/detail_ui_hack_id"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:srcCompat="@drawable/ic_expand_more_black_36dp" />
 
@@ -167,7 +167,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/explore_events_btn_id" />
+                            app:layout_constraintTop_toBottomOf="@+id/detail_ui_hack_id" />
 
                     </android.support.constraint.ConstraintLayout>
                 </android.support.constraint.ConstraintLayout>
