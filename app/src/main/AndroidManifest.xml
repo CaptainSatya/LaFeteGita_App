@@ -31,6 +31,8 @@
         <activity
             android:name=".AboutUS"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DetailsUI_Hack"></activity>
+
     </application>
 
 </manifest>
