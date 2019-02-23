@@ -22,5 +22,6 @@ public class DetailsUI_Hack extends BaseActivity {
 
         reg_btn = findViewById(R.id.reg_btn_id);
 
+
     }
 }
