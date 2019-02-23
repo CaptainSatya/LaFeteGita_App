@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1086659096432",
+    "firebase_url": "https://la-fete-gita-app.firebaseio.com",
+    "project_id": "la-fete-gita-app",
+    "storage_bucket": "la-fete-gita-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086659096432:android:3e962080b5c1faca",
+        "android_client_info": {
+          "package_name": "com.example.ravi.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086659096432-041btibrn8qd36014u0co8usgc1tgpek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ravi.myapplication",
+            "certificate_hash": "426bd163f83054ffe27617f4868ce86c91be0aa7"
+          }
+        },
+        {
+          "client_id": "1086659096432-n8o0fnci3uondkl45krjscprmj347fre.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD2c_j4-bZiQA7jX_gsw4bLC5Xbs6eiPw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086659096432-n8o0fnci3uondkl45krjscprmj347fre.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
