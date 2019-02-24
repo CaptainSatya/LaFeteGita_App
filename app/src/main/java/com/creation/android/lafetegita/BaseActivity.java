@@ -117,20 +117,21 @@ public class BaseActivity extends AppCompatActivity {
                     startActivity(intent);
 
                 } else if (id == R.id.nav_mega_reg_id) {
-                    /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
-                    startActivity(intent);*/
+                    Intent intent=new Intent(getApplicationContext(),UserProfileActivity.class);
+                    startActivity(intent);
 
                 } else if (id == R.id.nav_MyEvents) {
-                    /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
-                    startActivity(intent);*/
+//                    Intent intent=new Intent(getApplicationContext(),MyEventsActivity.class);
+                    Intent intent=new Intent(getApplicationContext(),UserProfileActivity.class);
+                    startActivity(intent);
 
                 } else if (id == R.id.logout) {
                     /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
                     startActivity(intent);*/
-                    Toast.makeText(BaseActivity.this, "logged out", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "logged out", Toast.LENGTH_SHORT).show();
                     mGoogleSignInClient.signOut();
                     mAuth.signOut();
-                    finish();
+                    startActivity(new Intent(getApplicationContext(), GLoginActivity.class));
 
                 }
 

@@ -1,5 +1,6 @@
 package com.creation.android.lafetegita;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.view.View;
@@ -7,12 +8,16 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class OnlineEvents extends BaseActivity {
     ImageButton expandButton;
     TextView supporting_text_tv;
     ImageButton essay_expand_ibtn;
     TextView essay_supporting_text_tv;
+
+    //widgets
+    Button btn_details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +59,19 @@ public class OnlineEvents extends BaseActivity {
                     //expandButton.setVisibility(View.GONE);
 
                 }
+            }
+        });
+
+
+        btn_details = findViewById(R.id.detail_ui_hack_id);
+        btn_details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(OnlineEvents.this, MyEventsActivity.class);
+//                intent.putExtra()
+
+                Toast.makeText(OnlineEvents.this, "good", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(OnlineEvents.this, DetailsUI_Hack.class));
             }
         });
 

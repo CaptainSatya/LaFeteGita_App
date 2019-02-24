@@ -26,15 +26,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OnlineEvents" />
         <activity android:name=".Hackathon" />
-        <activity android:name=".Prizes"></activity>
-
+        <activity android:name=".Prizes" />
         <activity
             android:name=".AboutUS"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".DetailsUI_Hack"></activity>
-        <activity android:name=".GLoginActivity"></activity>
-        <activity android:name=".UserProfileActivity"></activity>
+        <activity android:name=".DetailsUI_Hack" />
+        <activity android:name=".GLoginActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".MyEventsActivity"></activity>
     </application>
 
 </manifest>

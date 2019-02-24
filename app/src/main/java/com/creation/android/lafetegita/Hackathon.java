@@ -17,6 +17,9 @@ public class Hackathon extends BaseActivity {
 
     Button details_ui_hack_btn;
 
+    //Widgets
+    TextView tv_event_name, tv_event_date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +67,16 @@ public class Hackathon extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Hackathon.this, DetailsUI_Hack.class);
+
+                tv_event_name= findViewById(R.id.tv_event_name);
+                tv_event_date= findViewById(R.id.tv_event_date);
+
+                String event_name= tv_event_name.getText().toString();
+                String event_date= tv_event_date.getText().toString();
+
+                intent.putExtra("event_name", event_name);
+                intent.putExtra("event_date", event_date);
+
                 startActivity(intent);
             }
         });

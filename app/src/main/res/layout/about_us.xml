@@ -69,7 +69,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/primary_text"
+                            android:id="@+id/tv_event_name"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -78,13 +78,13 @@
                             android:text="What is La Fête Gita?"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
-                            app:layout_constraintBottom_toTopOf="@+id/sub_text"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_event_date"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/media_image" />
 
                         <TextView
-                            android:id="@+id/sub_text"
+                            android:id="@+id/tv_event_date"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -94,7 +94,7 @@
                             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/primary_text" />
+                            app:layout_constraintTop_toBottomOf="@+id/tv_event_name" />
 
                         <TextView
                             android:id="@+id/supporting_text_online_tv_id"
@@ -122,9 +122,9 @@
                             android:textAlignment="center"
                             android:textStyle="italic"
                             app:layout_constraintBottom_toTopOf="@+id/supporting_text_online_tv_id"
-                            app:layout_constraintEnd_toEndOf="@+id/sub_text"
-                            app:layout_constraintStart_toStartOf="@+id/sub_text"
-                            app:layout_constraintTop_toBottomOf="@+id/sub_text" />
+                            app:layout_constraintEnd_toEndOf="@+id/tv_event_date"
+                            app:layout_constraintStart_toStartOf="@+id/tv_event_date"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_event_date" />
 
                     </android.support.constraint.ConstraintLayout>
                 </android.support.constraint.ConstraintLayout>
