@@ -105,29 +105,29 @@ public class BaseActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.nav_home_id) {
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent1);
                     // Handle the camera action
                 } else if (id == R.id.nav_about_us_id) {
-                    Intent intent = new Intent(getApplicationContext(), AboutUS.class);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(getApplicationContext(), AboutUS.class);
+                    startActivity(intent1);
 
                 } else if (id == R.id.nav_events_id) {
-                    Intent intent = new Intent(getApplicationContext(), EventCategories.class);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(getApplicationContext(), EventCategories.class);
+                    startActivity(intent1);
 
                 } else if (id == R.id.nav_mega_reg_id) {
-                    Intent intent=new Intent(getApplicationContext(),UserProfileActivity.class);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(getApplicationContext(), UserProfileActivity.class);
+                    startActivity(intent1);
 
                 } else if (id == R.id.nav_MyEvents) {
-//                    Intent intent=new Intent(getApplicationContext(),MyEventsActivity.class);
-                    Intent intent=new Intent(getApplicationContext(),UserProfileActivity.class);
-                    startActivity(intent);
+//                    Intent intent1=new Intent(getApplicationContext(),MyEventsActivity.class);
+                    Intent intent1 = new Intent(getApplicationContext(), UserProfileActivity.class);
+                    startActivity(intent1);
 
                 } else if (id == R.id.logout) {
-                    /*Intent intent=new Intent(getApplicationContext(),EventCategories.class);
-                    startActivity(intent);*/
+                    /*Intent intent1=new Intent(getApplicationContext(),EventCategories.class);
+                    startActivity(intent1);*/
                     Toast.makeText(getApplicationContext(), "logged out", Toast.LENGTH_SHORT).show();
                     mGoogleSignInClient.signOut();
                     mAuth.signOut();
@@ -136,8 +136,8 @@ public class BaseActivity extends AppCompatActivity {
                 }
 
                 else if (id == R.id.profile) {
-                    Intent intent=new Intent(getApplicationContext(),UserProfileActivity.class);
-                    startActivity(intent);
+                    Intent intent1 = new Intent(getApplicationContext(), UserProfileActivity.class);
+                    startActivity(intent1);
 
 
                 }
@@ -189,8 +189,8 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     @Override
-    public void startActivity(Intent intent) {
-        super.startActivity(intent);
+    public void startActivity(Intent intent1) {
+        super.startActivity(intent1);
         overridePendingTransitionEnter();
     }
 

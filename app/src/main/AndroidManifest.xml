@@ -34,7 +34,6 @@
         <activity android:name=".GLoginActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".MyEventsActivity"></activity>
-        <activity android:name=".DetailsUI_Hack" />
         <activity android:name=".Details3D_Hack" />
         <activity android:name=".DetailsEssayOnline" />
         <activity android:name=".DetailsInviteOnline"></activity>

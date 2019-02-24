@@ -17,7 +17,7 @@ public class DetailsInviteOnline extends BaseActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(1).setChecked(true);
 
-        reg_btn = findViewById(R.id.reg_btn_id);
+        //reg_btn = findViewById(R.id.reg_btn_id);
 
     }
 }

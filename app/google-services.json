@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "1086659096432",
-    "firebase_url": "https://la-fete-gita-app.firebaseio.com",
-    "project_id": "la-fete-gita-app",
-    "storage_bucket": "la-fete-gita-app.appspot.com"
+    "project_number": "662159470251",
+    "firebase_url": "https://laftegita.firebaseio.com",
+    "project_id": "laftegita",
+    "storage_bucket": "laftegita.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1086659096432:android:3e962080b5c1faca",
+        "mobilesdk_app_id": "1:662159470251:android:3e962080b5c1faca",
         "android_client_info": {
           "package_name": "com.example.ravi.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1086659096432-041btibrn8qd36014u0co8usgc1tgpek.apps.googleusercontent.com",
+          "client_id": "662159470251-5dp5qrla2u57kp0ukqv7rp2n05bntu6u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.ravi.myapplication",
-            "certificate_hash": "426bd163f83054ffe27617f4868ce86c91be0aa7"
+            "certificate_hash": "3ee45c38ebbeb3e23f4f5c0aa71823f0a1e97aea"
           }
         },
         {
-          "client_id": "1086659096432-n8o0fnci3uondkl45krjscprmj347fre.apps.googleusercontent.com",
+          "client_id": "662159470251-5s4snfc6nb4ireaqg8qfir36ndhvodgo.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAD2c_j4-bZiQA7jX_gsw4bLC5Xbs6eiPw"
+          "current_key": "AIzaSyDERENJ432dCgh19HK4-A5tqcr9sME7O_c"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1086659096432-n8o0fnci3uondkl45krjscprmj347fre.apps.googleusercontent.com",
+              "client_id": "662159470251-5s4snfc6nb4ireaqg8qfir36ndhvodgo.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

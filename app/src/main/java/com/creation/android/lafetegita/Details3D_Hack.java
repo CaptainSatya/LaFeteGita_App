@@ -1,5 +1,6 @@
 package com.creation.android.lafetegita;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.widget.Button;
@@ -17,7 +18,9 @@ public class Details3D_Hack extends BaseActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(1).setChecked(true);
 
-        reg_btn = findViewById(R.id.reg_btn_id);
+        /*reg_btn = findViewById(R.id.reg_btn_id);
+        Intent intent=new Intent(Details3D_Hack.this,UserProfileActivity.class);
+        startActivity(intent);*/
 
     }
 }

@@ -20,7 +20,7 @@ public class OnlineEvents extends BaseActivity {
     Button details_essay_online_btn;
 
     //widgets
-    Button btn_details;
+    //Button btn_details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +84,7 @@ public class OnlineEvents extends BaseActivity {
         });
 
 
-        btn_details = findViewById(R.id.detail_ui_hack_id);
+       /* btn_details = findViewById(R.id.detail_ui_hack_id);
         btn_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,7 +94,7 @@ public class OnlineEvents extends BaseActivity {
                 Toast.makeText(OnlineEvents.this, "good", Toast.LENGTH_SHORT).show();
 //                startActivity(new Intent(OnlineEvents.this, DetailsUI_Hack.class));
             }
-        });
+        });*/
 
     }
 }

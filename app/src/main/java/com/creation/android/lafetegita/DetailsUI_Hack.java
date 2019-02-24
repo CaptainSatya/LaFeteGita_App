@@ -60,8 +60,8 @@ public class DetailsUI_Hack extends BaseActivity {
 
         setupFirebaseAuth();
 
-        reg_btn = findViewById(R.id.reg_btn_id);
-        reg_btn.setOnClickListener(new View.OnClickListener() {
+        // reg_btn = findViewById(R.id.reg_btn_id);
+        /*reg_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                startActivity(new Intent(DetailsUI_Hack.this, GLoginActivity.class));
@@ -76,7 +76,7 @@ public class DetailsUI_Hack extends BaseActivity {
 //                startActivity(intent);
 
             }
-        });
+        });*/
 
     }
 

@@ -188,7 +188,7 @@ public class GLoginActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
 
-        layout_userInfo.setVisibility(View.VISIBLE);
+        layout_userInfo.setVisibility(View.GONE);
 
 //        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
 
@@ -202,7 +202,7 @@ public class GLoginActivity extends AppCompatActivity {
             String personId = acct.getId();
             Uri personPhoto = acct.getPhotoUrl();
 
-            layout_userInfo.setVisibility(View.VISIBLE);
+            layout_userInfo.setVisibility(View.GONE);
             tv_username.setText(personName + '\n' + personId);
             tv_email.setText(personEmail);
         }
