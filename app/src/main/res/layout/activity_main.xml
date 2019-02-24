@@ -225,27 +225,33 @@
                         android:layout_marginTop="12dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/youth_festival"
-                        app:layout_constraintBottom_toTopOf="@id/detail_ui_hack_id"
+                        app:layout_constraintBottom_toTopOf="@id/details_invite_online_id"
                         app:layout_constraintDimensionRatio="H,16:9"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/avatar_image" />
 
-                    <Button
-                        android:id="@+id/detail_ui_hack_id"
+                    <android.support.design.button.MaterialButton
+                        android:id="@+id/details_invite_online_id"
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
+                        android:layout_marginTop="2dp"
                         android:minWidth="0dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="Explore Events"
-                        android:textColor="#DE000000"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textStyle="bold"
+                        app:backgroundTint="#FFF"
                         app:layout_constraintBottom_toTopOf="@+id/action_button_2"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/media_image" />
+                        app:layout_constraintTop_toBottomOf="@+id/media_image"
+                        app:strokeColor="#120101"
+                        app:rippleColor="#33AAAAAA"
+                        app:strokeWidth="2dp" />
 
                     <Button
                         android:id="@+id/action_button_2"
@@ -259,7 +265,7 @@
                         android:text="Share"
                         android:textColor="#DE000000"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/detail_ui_hack_id"
+                        app:layout_constraintStart_toEndOf="@+id/details_invite_online_id"
                         app:layout_constraintTop_toBottomOf="@+id/media_image"
                         app:layout_constraintVertical_bias="0.0" />
 
@@ -293,7 +299,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/detail_ui_hack_id" />
+                        app:layout_constraintTop_toBottomOf="@+id/details_invite_online_id" />
                     <!-- To expand you set visibility to "visible". To collapse you set visibility to "gone" -->
                 </android.support.constraint.ConstraintLayout>
 
@@ -313,6 +319,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+
+        <Button
+            android:id="@+id/know_btn_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#000000"
+            android:text="Know More About Us!"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Youtube_play_id"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="@+id/Youtube_play_id"
+            app:layout_constraintTop_toBottomOf="@+id/Youtube_play_id" />
+
+        <ImageView
+            android:id="@+id/lafetegita_iv_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Youtube_play_id"
+            app:layout_constraintEnd_toEndOf="@+id/Youtube_play_id"
+            app:layout_constraintStart_toStartOf="@+id/Youtube_play_id"
+            app:layout_constraintTop_toTopOf="@+id/Youtube_play_id"
+            app:srcCompat="@drawable/lafetegita_image" />
+
         <ImageButton
             android:id="@+id/play_btn_id"
             android:layout_width="65dp"
@@ -320,23 +354,11 @@
             android:layout_marginBottom="1dp"
             android:src="@drawable/youtube_new"
             app:layout_constraintBottom_toBottomOf="@+id/Youtube_play_id"
-            app:layout_constraintStart_toStartOf="@+id/Youtube_play_id"
             app:layout_constraintEnd_toEndOf="@+id/Youtube_play_id"
-            app:layout_constraintTop_toTopOf="@+id/Youtube_play_id" />
-
-        <Button
-            android:id="@+id/know_btn_id"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="Know More About Us!"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/Youtube_play_id"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.91"
             app:layout_constraintStart_toStartOf="@+id/Youtube_play_id"
-            app:layout_constraintTop_toBottomOf="@+id/Youtube_play_id" />
+            app:layout_constraintTop_toTopOf="@+id/Youtube_play_id"
+            app:layout_constraintVertical_bias="1.0" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

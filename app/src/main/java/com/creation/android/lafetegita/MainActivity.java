@@ -25,6 +25,7 @@ public class MainActivity extends BaseActivity {
     private YouTubePlayerSupportFragment youTubePlayerFragment;
     Button know_more_btn;
     Button explore_btn;
+    ImageView lafetegita_iv;
 
     //private TextView mTextMessage;
     //Button btn;
@@ -62,7 +63,7 @@ public class MainActivity extends BaseActivity {
         //mTextMessage = (TextView) findViewById(R.id.message);
 //        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 //        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
+        lafetegita_iv = findViewById(R.id.lafetegita_iv_id);
         final YouTubePlayerSupportFragment frag =
                 (YouTubePlayerSupportFragment) getSupportFragmentManager().findFragmentById(R.id.Youtube_play_id);
         play_btn = findViewById(R.id.play_btn_id);
@@ -82,6 +83,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
                 frag.initialize(YouTubeConfig.getApiKey(), mOnInitializedListener);
                 play_btn.setVisibility(View.GONE);
+                lafetegita_iv.setVisibility(View.GONE);
             }
         });
 
@@ -100,7 +102,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        explore_btn = findViewById(R.id.detail_ui_hack_id);
+        explore_btn = findViewById(R.id.details_invite_online_id);
         explore_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +129,7 @@ public class MainActivity extends BaseActivity {
                     sliderView.setImageDrawable(R.drawable.prizes_win);
                     break;
                 case 3:
-                    sliderView.setImageDrawable(R.drawable.isckcon_2);
+                    sliderView.setImageDrawable(R.drawable.lafetegita_image);
                     break;
             }
 

@@ -16,6 +16,7 @@ public class Hackathon extends BaseActivity {
     TextView _3d_supporting_text_tv;
 
     Button details_ui_hack_btn;
+    Button details_3d_hack_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +60,20 @@ public class Hackathon extends BaseActivity {
                 }
             }
         });
-        details_ui_hack_btn = findViewById(R.id.detail_ui_hack_id);
+        details_ui_hack_btn = findViewById(R.id.details_invite_online_id);
         details_ui_hack_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Hackathon.this, DetailsUI_Hack.class);
+                startActivity(intent);
+            }
+        });
+
+        details_3d_hack_btn = findViewById(R.id.details_essay_online_btn_id);
+        details_3d_hack_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Hackathon.this, Details3D_Hack.class);
                 startActivity(intent);
             }
         });

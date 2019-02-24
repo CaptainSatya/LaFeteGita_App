@@ -1,5 +1,6 @@
 package com.creation.android.lafetegita;
 
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,9 @@ public class OnlineEvents extends BaseActivity {
     TextView supporting_text_tv;
     ImageButton essay_expand_ibtn;
     TextView essay_supporting_text_tv;
+
+    Button details_invite_btn;
+    Button details_essay_online_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,24 @@ public class OnlineEvents extends BaseActivity {
                     //expandButton.setVisibility(View.GONE);
 
                 }
+            }
+        });
+
+        details_invite_btn = findViewById(R.id.details_invite_online_id);
+        details_invite_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OnlineEvents.this, DetailsEssayOnline.class);
+                startActivity(intent);
+            }
+        });
+
+        details_essay_online_btn = findViewById(R.id.details_essay_online_btn_id);
+        details_essay_online_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OnlineEvents.this, DetailsInviteOnline.class);
+                startActivity(intent);
             }
         });
 

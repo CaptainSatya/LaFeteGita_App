@@ -11,7 +11,6 @@ import android.widget.FrameLayout;
 public class DetailsUI_Hack extends BaseActivity {
 
     Button reg_btn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +20,6 @@ public class DetailsUI_Hack extends BaseActivity {
         navigationView.getMenu().getItem(1).setChecked(true);
 
         reg_btn = findViewById(R.id.reg_btn_id);
-
 
     }
 }

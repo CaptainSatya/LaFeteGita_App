@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_lafetegita"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_lafetegita"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -26,13 +26,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OnlineEvents" />
         <activity android:name=".Hackathon" />
-        <activity android:name=".Prizes"></activity>
-
+        <activity android:name=".Prizes" />
         <activity
             android:name=".AboutUS"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DetailsUI_Hack"></activity>
-
+        <activity android:name=".DetailsUI_Hack" />
+        <activity android:name=".Details3D_Hack" />
+        <activity android:name=".DetailsEssayOnline" />
+        <activity android:name=".DetailsInviteOnline"></activity>
     </application>
 
 </manifest>
