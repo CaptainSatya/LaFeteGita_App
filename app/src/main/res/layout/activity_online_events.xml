@@ -62,7 +62,7 @@
                             android:layout_height="0dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/invite3"
-                            app:layout_constraintBottom_toTopOf="@+id/primary_text"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_event_name"
                             app:layout_constraintDimensionRatio="H,16:9"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
@@ -71,7 +71,7 @@
                             app:layout_constraintVertical_chainStyle="spread" />
 
                         <TextView
-                            android:id="@+id/primary_text"
+                            android:id="@+id/tv_event_name"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -80,13 +80,13 @@
                             android:text="Creative Invite"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
-                            app:layout_constraintBottom_toTopOf="@+id/sub_text"
+                            app:layout_constraintBottom_toTopOf="@+id/tv_event_date"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/media_image" />
 
                         <TextView
-                            android:id="@+id/sub_text"
+                            android:id="@+id/tv_event_date"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
@@ -94,7 +94,7 @@
                             android:text="21st Feb'19"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
-                            app:layout_constraintTop_toBottomOf="@+id/primary_text"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_event_name"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintBottom_toTopOf="@+id/details_invite_online_id" />
@@ -113,7 +113,7 @@
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
                             app:layout_constraintBottom_toTopOf="@+id/supporting_text_home_page_tv_id"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/sub_text" />
+                            app:layout_constraintTop_toBottomOf="@+id/tv_event_date" />
 
                         <com.like.LikeButton
                             android:id="@+id/favorite_button"

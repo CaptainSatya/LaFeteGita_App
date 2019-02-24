@@ -1,23 +1,32 @@
 package com.creation.android.lafetegita;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.smarteist.autoimageslider.DefaultSliderView;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderLayout;
 
 public class MainActivity extends BaseActivity {
+
+    private static final String TAG = "MainActivity";
+    private Context mContext = MainActivity.this;
 
     SliderLayout sliderLayout;
     YouTubePlayer.OnInitializedListener mOnInitializedListener;
@@ -26,6 +35,17 @@ public class MainActivity extends BaseActivity {
     Button know_more_btn;
     Button explore_btn;
     ImageView lafetegita_iv;
+
+
+    //firebase auth
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListner;
+    //firebase auth
+
+    //widgets
+    TextView tv_share;
+    //widgets
+
 
     //private TextView mTextMessage;
     //Button btn;
@@ -54,6 +74,9 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //firebase auth
+        setupFirebaseAuth();
 
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame); //Remember this is the FrameLayout area within your activity_main.xml
         getLayoutInflater().inflate(R.layout.activity_main, contentFrameLayout);
@@ -110,6 +133,14 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        tv_share= findViewById(R.id.action_button_2);
+        tv_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, UserProfileActivity.class));
+            }
+        });
     }
 
     private void setSliderViews() {
@@ -149,6 +180,73 @@ public class MainActivity extends BaseActivity {
             sliderLayout.addSliderView(sliderView);
         }
     }
+
+
+    /*
+    .....................................firebase................................................
+     */
+
+
+    /**
+     * checks to see if User is singned in.
+     * @param user
+     */
+    //self created from video
+    private void checkCurrentUser(FirebaseUser user){
+        Log.d(TAG, "checkCurrentUser: is logged in");
+
+        if(user==null)
+            startActivity(new Intent(mContext, GLoginActivity.class));
+
+    }
+
+
+    /**
+     * setup firebase auth object.
+     */
+
+    // this I set up from coding with mitch video , not with firebase Assistant.
+    private void setupFirebaseAuth() {
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuthListner = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                checkCurrentUser(user);
+
+                if (user!= null){
+                    Log.d(TAG, "onAuthStateChanged: signed in" + user.getUid());
+                } else{
+                    Log.d(TAG, "onAuthStateChanged: signed out");
+                }
+            }
+        };
+
+    }
+    //.... manual setup ends
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListner);
+
+        //always checks the User on starting the activity.
+        checkCurrentUser(mAuth.getCurrentUser());
+
+//        // Check if User is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        updateUI(currentUser);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if(mAuthListner!=null)
+            mAuth.removeAuthStateListener(mAuthListner);
+    }
+
 
 
 }

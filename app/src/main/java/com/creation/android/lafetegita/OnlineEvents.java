@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class OnlineEvents extends BaseActivity {
     ImageButton expandButton;
@@ -17,6 +18,9 @@ public class OnlineEvents extends BaseActivity {
 
     Button details_invite_btn;
     Button details_essay_online_btn;
+
+    //widgets
+    Button btn_details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +80,19 @@ public class OnlineEvents extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(OnlineEvents.this, DetailsInviteOnline.class);
                 startActivity(intent);
+            }
+        });
+
+
+        btn_details = findViewById(R.id.detail_ui_hack_id);
+        btn_details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(OnlineEvents.this, MyEventsActivity.class);
+//                intent.putExtra()
+
+                Toast.makeText(OnlineEvents.this, "good", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(OnlineEvents.this, DetailsUI_Hack.class));
             }
         });
 
