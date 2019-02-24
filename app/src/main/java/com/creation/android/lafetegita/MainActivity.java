@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -39,6 +40,10 @@ public class MainActivity extends BaseActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListner;
     //firebase auth
+
+    //widgets
+    TextView tv_share;
+    //widgets
 
 
     //private TextView mTextMessage;
@@ -126,6 +131,14 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        tv_share= findViewById(R.id.action_button_2);
+        tv_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, UserProfileActivity.class));
+            }
+        });
     }
 
     private void setSliderViews() {
@@ -173,7 +186,7 @@ public class MainActivity extends BaseActivity {
 
 
     /**
-     * checks to see if user is singned in.
+     * checks to see if User is singned in.
      * @param user
      */
     //self created from video
@@ -217,16 +230,16 @@ public class MainActivity extends BaseActivity {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListner);
 
-        //always checks the user on starting the activity.
+        //always checks the User on starting the activity.
         checkCurrentUser(mAuth.getCurrentUser());
 
-//        // Check if user is signed in (non-null) and update UI accordingly.
+//        // Check if User is signed in (non-null) and update UI accordingly.
 //        FirebaseUser currentUser = mAuth.getCurrentUser();
 //        updateUI(currentUser);
     }
 
     @Override
-    protected void onStop() {
+    public void onStop() {
         super.onStop();
         if(mAuthListner!=null)
             mAuth.removeAuthStateListener(mAuthListner);

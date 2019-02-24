@@ -34,6 +34,7 @@
 
         <activity android:name=".DetailsUI_Hack"></activity>
         <activity android:name=".GLoginActivity"></activity>
+        <activity android:name=".UserProfileActivity"></activity>
     </application>
 
 </manifest>

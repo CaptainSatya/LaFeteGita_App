@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.creation.android.lafetegita.GLoginActivity;
+import com.creation.android.lafetegita.Model.User;
 import com.creation.android.lafetegita.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -28,6 +29,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class GLoginActivity extends AppCompatActivity {
 
@@ -40,8 +46,20 @@ public class GLoginActivity extends AppCompatActivity {
     // RC means request code. can give any number.
     private int RC_SIGN_IN = 1;
 
-    //firebase auth
+
+    //firebase
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListner;
+    private String user_id;
+
+    //Firebase database
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference myDbRef = firebaseDatabase.getReference(); // initilize database in 'setupFirebaseAuth' method.
+
+
+    private MyFirebaseMethods myFirebaseMethods = new MyFirebaseMethods(GLoginActivity.this);
+
+
 
     //widgets
     ConstraintLayout layout_userInfo;
@@ -55,6 +73,8 @@ public class GLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_g_login);
 
         initWidgets();
+
+        setupFirebaseAuth();
 
         //initilizing mAuth
         mAuth = FirebaseAuth.getInstance();
@@ -107,8 +127,8 @@ public class GLoginActivity extends AppCompatActivity {
     }
 
 //    private void updateUI(GoogleSignInAccount account) {
-//        //If GoogleSignIn.getLastSignedInAccount returns a GoogleSignInAccount object (rather than null), the user has already signed in to your app with Google. Update your UI accordingly—that is, hide the sign-in button, launch your main activity, or whatever is appropriate for your app.
-//        //If GoogleSignIn.getLastSignedInAccount returns null, the user has not yet signed in to your app with Google. Update your UI to display the Google Sign-in button.
+//        //If GoogleSignIn.getLastSignedInAccount returns a GoogleSignInAccount object (rather than null), the User has already signed in to your app with Google. Update your UI accordingly—that is, hide the sign-in button, launch your main activity, or whatever is appropriate for your app.
+//        //If GoogleSignIn.getLastSignedInAccount returns null, the User has not yet signed in to your app with Google. Update your UI to display the Google Sign-in button.
 //
 //    }
 
@@ -145,7 +165,7 @@ public class GLoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // Sign in success, update UI with the signed-in User's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
@@ -153,7 +173,7 @@ public class GLoginActivity extends AppCompatActivity {
                             startActivity(new Intent(GLoginActivity.this, MainActivity.class));
 
                         } else {
-                            // If sign in fails, display a message to the user.
+                            // If sign in fails, display a message to the User.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
 //                            Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
 
@@ -203,5 +223,149 @@ public class GLoginActivity extends AppCompatActivity {
 //            updateUI(null);
 //        }
 //    }
+
+
+
+     /*
+    .....................................firebase................................................
+     */
+
+    /**
+     * setup firebase auth object.
+     */
+
+    // this I set up from coding with mitch video , not with firebase Assistant.
+    private void setupFirebaseAuth() {
+        mAuth = FirebaseAuth.getInstance();
+
+        if (mAuth.getCurrentUser() != null) {
+            user_id = mAuth.getCurrentUser().getUid();
+
+        }
+
+        mAuthListner = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                if (user != null) {
+                    Log.d(TAG, "onAuthStateChanged: signed in" + user.getUid());
+
+                    myDbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Log.d(TAG, "onDataChange: dataSnapshot " + dataSnapshot);
+
+//                            myFirebaseMethods.addNewUser(email, mUsername);
+
+
+                             //GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
+                            //note arg 'getActivity()' changed manually to 'getApplicationContext()'.
+                            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+
+                            if (acct != null) {
+                                String personName = acct.getDisplayName();
+                                String personGivenName = acct.getGivenName();
+                                String personFamilyName = acct.getFamilyName();
+                                String personEmail = acct.getEmail();
+                                String personId = acct.getId();
+                                Uri personPhoto = acct.getPhotoUrl();
+
+////            layout_userInfo.setVisibility(View.VISIBLE);
+//                                tv_username.setText(personName + '\n' + personId);
+//                                tv_email.setText(personEmail);
+
+//                                User user = new User(user_id,personName,personEmail );
+                                User user = new User(personId,personName,personEmail );
+
+                                myDbRef.child("users")
+                                        .child(personId)
+                                        .setValue(user);
+
+                            }
+
+//                            User user = new User(user_id,, tv_email.getText().toString() );
+//
+//                            myDbRef.child("users")
+//                                    .child(user_id)
+//                                    .setValue(user);
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+                } else {
+                    Log.d(TAG, "onAuthStateChanged: signed out");
+                }
+            }
+        };
+
+
+
+//        myDbRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                Log.d(TAG, "onDataChange: dataSnapshot" + dataSnapshot);
+//                //retreive user info from the database
+////
+////                User user = myFirebaseMethods.getUserInfo(dataSnapshot); // dataSnapshot = user data from database
+////                feedDataToNavigationWidgetsFromDatabase(user);
+//
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Log.d(TAG, "onCancelled: Error" + databaseError.getMessage());
+//            }
+//        });
+//
+
+        //.... manual setup ends
+    }
+//
+//    private void feedData() {
+//        myDbRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                Log.d(TAG, "onDataChange: dataSnapshot" + dataSnapshot);
+//                //retreive user info from the database
+//
+//                User user = myFirebaseMethods.getUserInfo(dataSnapshot); // dataSnapshot = user data from database
+//                feedDataToNavigationWidgetsFromDatabase(user);
+//
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                Log.d(TAG, "onCancelled: Error" + databaseError.getMessage());
+//            }
+//        });
+//    }
+//
+//
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListner);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListner != null)
+            mAuth.removeAuthStateListener(mAuthListner);
+    }
+
+
 }
+
 

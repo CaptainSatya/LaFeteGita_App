@@ -21,21 +21,21 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="Mega Registration" />
         <item
-            android:id="@+id/prizes"
+            android:id="@+id/profile"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Prizes" />
+            android:title="Profile" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_MyEvents"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="My events" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/logout"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="logout" />
         </menu>
     </item>
 
