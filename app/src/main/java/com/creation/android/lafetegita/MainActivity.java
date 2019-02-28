@@ -125,7 +125,7 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        explore_btn = findViewById(R.id.details_invite_online_id);
+        explore_btn = findViewById(R.id.details_literary_quiz_id);
         explore_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

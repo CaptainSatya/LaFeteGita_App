@@ -16,5 +16,6 @@
         app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/amazing_prizes" />
 </android.support.constraint.ConstraintLayout>

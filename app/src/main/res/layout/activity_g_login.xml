@@ -22,6 +22,7 @@
             android:layout_height="127dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="52dp"
+            android:contentDescription="TODO"
             android:src="@drawable/about_icon_google_play"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -78,6 +79,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/lafetegita" />
 
     <android.support.design.button.MaterialButton

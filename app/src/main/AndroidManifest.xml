@@ -33,10 +33,14 @@
         <activity android:name=".DetailsUI_Hack" />
         <activity android:name=".GLoginActivity" />
         <activity android:name=".UserProfileActivity" />
-        <activity android:name=".MyEventsActivity"></activity>
+        <activity android:name=".MyEventsActivity" />
         <activity android:name=".Details3D_Hack" />
         <activity android:name=".DetailsEssayOnline" />
-        <activity android:name=".DetailsInviteOnline"></activity>
+        <activity android:name=".DetailsInviteOnline" />
+        <activity android:name=".Literary" />
+        <activity android:name=".DigitalArts" />
+        <activity android:name=".Arts" />
+        <activity android:name=".Cultural"></activity>
     </application>
 
 </manifest>

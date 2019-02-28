@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class Hackathon extends BaseActivity {
+public class Cultural extends BaseActivity {
     ImageButton ui_expandButton;
     TextView ui_supporting_text_tv;
     ImageButton _3d_expand_ibtn;
@@ -25,7 +25,7 @@ public class Hackathon extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame); //Remember this is the FrameLayout area within your activity_main.xml
-        getLayoutInflater().inflate(R.layout.activity_hackathon, contentFrameLayout);
+        getLayoutInflater().inflate(R.layout.activity_cultural, contentFrameLayout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(1).setChecked(true);
 
@@ -67,13 +67,13 @@ public class Hackathon extends BaseActivity {
         details_ui_hack_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Hackathon.this, DetailsUI_Hack.class);
+                Intent intent = new Intent(Cultural.this, DetailsUI_Hack.class);
 
-                tv_event_name= findViewById(R.id.tv_event_name);
-                tv_event_date= findViewById(R.id.tv_event_date);
+                tv_event_name = findViewById(R.id.tv_event_name);
+                tv_event_date = findViewById(R.id.tv_event_date);
 
-                String event_name= tv_event_name.getText().toString();
-                String event_date= tv_event_date.getText().toString();
+                String event_name = tv_event_name.getText().toString();
+                String event_date = tv_event_date.getText().toString();
 
                 intent.putExtra("event_name", event_name);
                 intent.putExtra("event_date", event_date);
@@ -86,7 +86,7 @@ public class Hackathon extends BaseActivity {
         details_3d_hack_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Hackathon.this, Details3D_Hack.class);
+                Intent intent = new Intent(Cultural.this, Details3D_Hack.class);
                 startActivity(intent);
             }
         });

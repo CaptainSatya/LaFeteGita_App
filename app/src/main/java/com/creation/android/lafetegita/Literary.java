@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class OnlineEvents extends BaseActivity {
+public class Literary extends BaseActivity {
     ImageButton expandButton;
     TextView supporting_text_tv;
     ImageButton essay_expand_ibtn;
@@ -25,7 +25,7 @@ public class OnlineEvents extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame); //Remember this is the FrameLayout area within your activity_main.xml
-        getLayoutInflater().inflate(R.layout.activity_online_events, contentFrameLayout);
+        getLayoutInflater().inflate(R.layout.activity_literary, contentFrameLayout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.getMenu().getItem(1).setChecked(true);
 
@@ -68,7 +68,7 @@ public class OnlineEvents extends BaseActivity {
         details_invite_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnlineEvents.this, DetailsEssayOnline.class);
+                Intent intent = new Intent(Literary.this, DetailsEssayOnline.class);
                 startActivity(intent);
             }
         });
@@ -77,7 +77,7 @@ public class OnlineEvents extends BaseActivity {
         details_essay_online_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnlineEvents.this, DetailsInviteOnline.class);
+                Intent intent = new Intent(Literary.this, DetailsInviteOnline.class);
                 startActivity(intent);
             }
         });

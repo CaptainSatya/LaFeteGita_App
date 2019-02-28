@@ -14,12 +14,13 @@
 
         <TextView
             android:id="@+id/online_event_list_tv_id"
-            android:layout_width="229dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="Online Events!"
+            android:text="Cultural"
+            android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/CL_online1_id"
@@ -58,17 +59,10 @@
 
                         <ImageView
                             android:id="@+id/media_image"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
+                            android:layout_width="336dp"
+                            android:layout_height="189dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/invite3"
-                            app:layout_constraintBottom_toTopOf="@+id/tv_event_name"
-                            app:layout_constraintDimensionRatio="H,16:9"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_chainStyle="spread" />
+                            android:src="@drawable/invite3" />
 
                         <TextView
                             android:id="@+id/tv_event_name"
@@ -77,7 +71,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="Creative Invite"
+                            android:text="Rang Manch - Drama"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
                             app:layout_constraintBottom_toTopOf="@+id/tv_event_date"
@@ -91,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="21st Feb'19"
+                            android:text="24th Feb'19"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
                             app:layout_constraintTop_toBottomOf="@+id/tv_event_name"
@@ -105,7 +99,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="11dp"
                             android:minWidth="0dp"
                             android:paddingStart="8dp"
                             android:paddingEnd="8dp"
@@ -238,7 +232,7 @@
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="Think Piece-Online essay"
+                            android:text="Eurythmia-Singing-Solo"
                             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                             android:textColor="@color/colorPrimaryTextDefaultMaterialLight"
                             app:layout_constraintBottom_toTopOf="@+id/essay_date_tv_id"
@@ -252,7 +246,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_marginEnd="16dp"
-                            android:text="22nd Feb'19"
+                            android:text="23rd Feb'19"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                             android:textColor="@color/colorSecondaryTextDefaultMaterialLight"
                             app:layout_constraintBottom_toTopOf="@+id/details_essay_online_btn_id"
@@ -306,7 +300,7 @@
                             app:srcCompat="@drawable/ic_share_black_24dp" />
 
                         <ImageButton
-                            android:id="@+id/essay_expand_ibtn_id"
+                            android:id="@+id/_3d_expand_ibtn_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
@@ -317,7 +311,7 @@
                             app:srcCompat="@drawable/ic_expand_more_black_36dp" />
 
                         <TextView
-                            android:id="@+id/essay_supporting_text_tv_id"
+                            android:id="@+id/_3d_supporting_text_tv_id"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"

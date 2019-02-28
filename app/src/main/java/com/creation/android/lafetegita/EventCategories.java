@@ -11,6 +11,10 @@ public class EventCategories extends BaseActivity {
 
     CardView online_event_card;
     CardView hackathon_card;
+    CardView literary_card;
+    CardView digital_card;
+    CardView arts_card;
+    CardView cultural_card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,42 @@ public class EventCategories extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventCategories.this, Hackathon.class);
+                startActivity(intent);
+            }
+        });
+
+        literary_card = findViewById(R.id.literary_card_id);
+        literary_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventCategories.this, Literary.class);
+                startActivity(intent);
+            }
+        });
+
+        digital_card = findViewById(R.id.digital_card_id);
+        digital_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventCategories.this, DigitalArts.class);
+                startActivity(intent);
+            }
+        });
+
+        arts_card = findViewById(R.id.arts_card_id);
+        arts_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventCategories.this, Arts.class);
+                startActivity(intent);
+            }
+        });
+
+        cultural_card = findViewById(R.id.cultural_card_id);
+        cultural_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventCategories.this, Cultural.class);
                 startActivity(intent);
             }
         });

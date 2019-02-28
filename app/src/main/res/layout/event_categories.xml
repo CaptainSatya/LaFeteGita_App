@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
+            android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,6 +66,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/hackathon"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -94,13 +96,14 @@
         <!-- COLUMN 2  -->
 
         <android.support.v7.widget.CardView
+            android:id="@+id/digital_card_id"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
-            android:layout_rowWeight="1"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -114,6 +117,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/digital"
                     app:layout_constraintBottom_toBottomOf="@+id/digital_art_btn_id"
@@ -147,13 +151,14 @@
         <!-- COLUMN 1  -->
 
         <android.support.v7.widget.CardView
+            android:id="@+id/literary_card_id"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
-            android:layout_rowWeight="1"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -167,6 +172,8 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
+
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/literary"
                     app:layout_constraintBottom_toBottomOf="@+id/literary_btn_id"
@@ -219,6 +226,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/online2"
                     app:layout_constraintBottom_toBottomOf="@+id/online_btn_id"
@@ -253,13 +261,14 @@
         <!-- COLUMN 1  -->
 
         <android.support.v7.widget.CardView
+            android:id="@+id/cultural_card_id"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
-            android:layout_rowWeight="1"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -273,6 +282,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/cultural"
                     app:layout_constraintBottom_toBottomOf="@+id/cultural_btn_id"
@@ -304,13 +314,14 @@
         <!-- COLUMN 2  -->
 
         <android.support.v7.widget.CardView
+            android:id="@+id/arts_card_id"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
-            android:layout_rowWeight="1"
-            app:cardElevation="8dp"
-            app:cardCornerRadius="8dp">
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -324,6 +335,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_gravity="center_horizontal"
+                    android:contentDescription="TODO"
                     android:scaleType="centerCrop"
                     android:src="@drawable/arts"
                     app:layout_constraintBottom_toBottomOf="@+id/arts_btn_id"
